@@ -1,0 +1,260 @@
+\documentclass[12pt,a4paper]{scrartcl}
+%\usepackage[margin=2.5cm]{geometry}
+\setlength{\parindent}{1cm}
+%opening
+\title{Summary of Git commands}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Main commands}
+\begin{itemize}
+	\item Create a new subdirectory named \textit{.git} in project folder (here, \textit{c:/go/to/di\-recto\-ry/of/project}) [2 steps]:
+	\begin{enumerate}
+		\item \texttt{cd c:/go/to/directory/of/project}
+		\item \texttt{git init}
+	\end{enumerate}
+	
+	\item Add a file, or a series of files, to version control [2 steps]:
+	\begin{enumerate}
+		\item \texttt{git add *.cpp} \hspace{2cm} adds all \textit{.cpp} files in project folder\\
+		      or\\
+		      \texttt{git add singlefile.boh} 
+		\item 
+		     \begin{labeling}{\texttt{git commit -m 'initial project version'}}
+			     \item [\texttt{git commit -m 'initial project version'}] creates initial state of repository, and adds a brief explicative comment
+			\end{labeling}
+	\end{enumerate}
+
+	
+	\item Clone an existing remote repository, and set the new local one to track the remote:\\
+		\texttt{git clone https://github.com/your-github-username/etc} \hspace{5mm} \texttt{name-of-re\-po\-si\-tory-on-local-machine} (last term optional)\\[-0.5cm]
+		
+		\hspace{1cm} or, if remote is not on \textit{Github}\\[-0.5cm]
+		
+	    \texttt{git clone git://} \hspace{1cm} or \hspace{1cm} \texttt{\hbox{user@server:path/to/repository}}
+		
+	\item Add modified file to staged area:\\
+		\texttt{git add file.cpp}
+		
+	\item Commit changes (current state becomes staged):\\
+		\texttt{git commit -m "Your commit message here"}
+	
+	\item Check status (unmodified/modified/staged commits):\\
+		\texttt{git status} \hspace{2cm} verbose\\
+		 or\\
+		\texttt{git status -s} \hspace{5mm} or \hspace{5mm} \texttt{git status --short} \hspace{2cm} succinct
+		
+	\item Add a remote repository (\textit{your-repository}) and gives it a shortname (\textit{chosen-shortname}):\\
+		\texttt{git remote add chosen-shortname https://github.com/your-repository}
+	
+	\item Copy a remote repository previously added to local. The remote is identified by a shortname (here \textit{my-remote}):\\ 
+		\texttt{git fetch my-remote}\\
+		\texttt{git pull my-remote} \hspace{2cm} copies the remote and tries to merge it with local
+	
+	\item Push local branch to the remote server:\\
+		\texttt{git push name-of-server local-branch}
+	
+	\item List of local branches:\\
+		\texttt{git branch}
+		
+	\item Create a new branch:\\
+		\texttt{git branch new-branch-name}
+		
+	\item Switch to an existing branch:
+	    \begin{labeling}{\texttt{git checkout my-other-branch}}
+			\item [\texttt{git checkout my-other-branch}]  the \textit{HEAD} pointer now points to \textit{my-other-branch}'s current commit
+		\end{labeling}
+	
+	\item Create + switch to new branch:\\
+		\texttt{git checkout -b new-branch-name}
+		
+	\item Delete branch:\\
+		\texttt{git branch -d some-branch}
+		
+	\item Merge a branch into another:
+		\begin{labeling}{\texttt{git merge some-branch}}
+			\item [\texttt{git merge some-branch}] merges \textit{some-branch} into the current branch pointed by \textit{HEAD}. But first go to the branch you want to merge into by \texttt{git checkout my-branch}, and only then \texttt{git merge some-branch} into it
+		\end{labeling}
+		
+	\item Synchronise local database with remote server (update local database with remote data and pointers):
+		\begin{labeling}{\texttt{git fetch name-of-server}}
+			\item [\texttt{git fetch name-of-server}] to merge it with local database, \texttt{git merge name-of\--server/branch\--to-merge}.
+	There has to exist a local branch by the name of \textit{branch-to-merge} to merge the remote \textit{branch-to-merge} into
+			\item [\texttt{git pull name-of-server}]  = \texttt{fetch} + \texttt{merge} operations
+		\end{labeling}
+\end{itemize}
+	
+\section{Other useful commands}	
+\begin{itemize}	
+	\item Check what has been changed but not staged:\\
+		\texttt{git diff}
+		
+	\item Check what has been already staged (the two commands given are identical):\\
+		\texttt{git diff --staged}\\
+		\texttt{git diff --cached}
+		
+	\item Create a \textit{.gitignore} file, listing files ending in some specific way as to be ignored:\\
+		\texttt{cat .gitignore *.boh *.[oa]} (ignore any .o or .a file) \texttt{doc/**/*.pdf} (ignore any pdf in subdirs) \texttt{doc/} (ignore anything in subdir doc)
+	
+	\item More options to \texttt{commit}:
+		\begin{labeling}{\texttt{git commit --amend}}
+			\item [\texttt{git commit}]
+			\item [\texttt{git commit -v}] more details on changes committed
+			\item [\texttt{git commit -a}] skips staging area for modified files (no \texttt{git add} command required)
+			\item [\texttt{git commit --amend}] replaces previous \texttt{commit} with new \texttt{commit} (command issued following minor corrections to already staged-\-and-\-committed files)
+		\end{labeling}
+		
+	\item Remove a file from the git project (manually removing the file from the working directory will not remove it from the unstaged area). Deletion will happen next time a \texttt{commit} is run:
+		\begin{labeling}{\texttt{git rm --cached name-of-file}}
+			\item [\texttt{git rm name-of-file}] if unstaged. Removes \textit{name-of-file} from working directory
+			\item [\texttt{git rm -f name-of-file}] forces removal if already staged. Removes \textit{name-of-file} from working directory
+			\item [\texttt{git rm --cached name-of-file}] removes the file anywhere from git, but keeps it in your working directory
+			\item [\texttt{git rm log/\{\}*.log}] removes all \textit{.log} files in directory \textit{log/}
+			\item [\texttt{git rm \{\}*\~}] removes all files ending with \textit{\~} in the project
+		\end{labeling}
+				
+	\item Rename a file in git (renaming will happen after \texttt{commit}):\\
+		\texttt{git mv old-name new-name}
+		
+	\item Check contents of a file inside git project:
+		\begin{labeling}{\texttt{git cat-file -p [} prefix code}
+			\item [{\parbox[t]{20cm}{\texttt{git cat-file -p [}prefix code of directory\texttt{]checksum-of-file}}}] for instance, in \textit{/git/projects/0a}, open \textit{3b69012c...} as \textit{0a3b69012c...}
+		\end{labeling}
+		
+	\item Review the commit history:
+		\begin{labeling}{\texttt{git log --oneline --decorate --graph --all}}
+			\item [\texttt{git log}]
+			\item [\texttt{git log -p(--patch)}]   displays the outut of diff between each commit in history log so you can see changes
+			\item [\texttt{git log --stat}]        gives summary of file changed for each commit and in total
+			\item [{\parbox[t]{20cm}{\texttt{git log --pretty= oneline, short, full,\\fuller, format:"\%h - \%an, \%ar : \%s"}}}] various options to customize, with output format: \texttt{\%h}: abbreviated hash, \texttt{\%an}: author's name, \texttt{\%ar}: date of change relative to now, \texttt{\%s}: description
+			\item [\texttt{git log --graph}] crude graphical representation of commits in their branches
+			\item [\texttt{git log --decorate}] shows which commit the \textit{HEAD} pointer points to
+			\item [\texttt{git log --oneline --decorate --graph --all}] shows graphically the branch history, and where HEAD is at now
+		\end{labeling}
+		
+	\item Limit the \texttt{log} output to certain entries:
+		\begin{labeling}{\texttt{git log --[use-any-of-the-options-above] -- t/}}
+			\item [\texttt{git log -2,3,4...}] shows only last 2,3,4.. commits
+			\item [{\parbox[t]{20cm}{\texttt{git log --since=2.weeks} or\\ \texttt{git log --until="2008-1-25"} or\\ \texttt{git log --until="2 years 1 day 3 minutes ago"}}}] shows commits made since a date, or until a date
+			\item [\texttt{git log --author= 'Donald Duck'}] includes only commits by Donald Duck
+			\item [\texttt{git log --grep= "a comment"}] includes only commits with \textit{a comment} in their commit description
+			\item [\texttt{git log -S function-name}]  includes only commits changing the code with function-name in it
+			\item [\texttt{git log --[use-any-of-the-options-above] -- t/}] includes only commits in directory path \texttt{t/}
+			\item [\texttt{git log --no-merges}] excludes commits that are only merges (and are usually not very informative)
+		\end{labeling}
+		
+	\item Unstage a staged file:\\
+		\texttt{git reset HEAD name-of-file}
+		
+	\item Unmodify a modified file (dangerous command, overwrites all modifications):\\
+		\texttt{git checkout -- name-of-file}
+		
+	\item Consult the list of remote servers you can work with from the current local folder:
+		\begin{labeling}{\texttt{git remote show shortname-of-remote}}
+			\item [\texttt{git remote}]
+			\item [\texttt{git remote -v}] shows URLs of remotes
+			\item [\texttt{git remote show shortname-of-remote}] verbose
+		\end{labeling}
+		
+	\item Rename a remote:\\
+		\texttt{git remote rename old-name new-name}
+		
+	\item Remove a remote repository from local machine:\\
+		\texttt{git remote remove remote-name}\\
+		\texttt{git remote rm remote-name}
+		
+	\item Tags:
+		\begin{labeling}{\texttt{git tag -a v1.4 -m "My annotation to the tag"}}
+			\item[\texttt{git tag}]  lists tags
+			\item[\texttt{git tag --list} (or \texttt{-l})] lists tags
+			\item[\texttt{git tag -l "v1.85*"}] searches and shows all tags beginning with \textit{v1.85}
+			\item[\texttt{git tag -a v1.4 -m "My annotation to the tag"}] adds an annotated tag
+			\item[\texttt{git tag v1.4}]                                adds a lightweight tag
+			\item[\texttt{git show v1.4}]                               shows tag's contents
+			\item[\texttt{git push origin v1.4}]                        pushes tag to remote repository
+			\item[\texttt{git push origin --tags}]                      pushes all local tags not yet on remote repository
+			\item[\texttt{git tag -d v1.4}]                             deletes tag locally
+			\item[\texttt{git push origin :refs/tags/v1.4}]             deletes tag from remote repository by updating it
+		\end{labeling}
+
+		
+	\item Create macros (aliases) to commands:
+		\begin{labeling}{\texttt{git config --global alias.ci commit}}
+			\item [\texttt{git config --global alias.ci commit}]       now can commit by typing \textit{git ci}
+		\end{labeling}
+	
+	\item Create custom commands:
+		\begin{labeling}{\texttt{git config --global alias.unstage 'reset HEAD --'}}
+			\item[\texttt{git config --global alias.unstage 'reset HEAD --'}] joins \texttt{git unstage filename} with \texttt{git reset HEAD -- filename}
+			\item[\texttt{git config --global alias.last 'log -1 HEAD'}] common custom command, used to show only last commit
+		\end{labeling}
+		   
+    \item More options to list local branches:
+    	\begin{labeling}{\texttt{git branch --merged(--no-merged) my-branch}}
+    		\item[\texttt{git branch -v}]                  shows last commit for each branch
+    		\item[\texttt{git branch --merged}]            shows all branches merged to the branch pointed by \textit{HEAD}  (these can be safely deleted)
+    		\item[\texttt{git branch --no-merged}]         shows all unmerged branches to to the branch pointed by \textit{HEAD} (not deletable)
+    		\item[\texttt{git branch --merged(--no-merged) my-branch}]   shows all merged(unmerged) branches to branch \textit{my-branch}
+    	\end{labeling}
+          
+    \item Delete remote branch:\\
+    	\texttt{git push name-of-server --delete name-of-branch-to-delete}
+    
+	\item Show merge conflicts:\\
+    	\texttt{git mergetool}
+    
+    \item Show list of remote branches:\\
+    	\texttt{git ls-remote name-of-server}\\
+    	\texttt{git remote show name-of-server}
+    
+    \item More options on synchronising local database with remote server:
+    	\begin{labeling}{\texttt{git branch -u name-of-server/name-of-branch}}
+    		\item [\texttt{git fetch --all}]  each local branch gets updated
+    		\item [{\parbox[t]{20cm}{\texttt{git checkout -b name-of-branch name-of-server/name-of-branch}}}] creates a local branch copy of the remote one
+    		\item [\texttt{git checkout name-of-branch}]  if \textit{name-of-branch} exists on the server but not locally, it is created locally as a tracking branch of the one on the server
+    		\item [\texttt{git branch -u name-of-server/name-of-branch}] sets local current branch to track the specified remote branch
+    	\end{labeling}
+    	   
+    \item Show local list of tracking branches:
+    	\begin{labeling}{\texttt{git branch -vv}}
+    		\item [\texttt{git branch -vv}] \textit{ahead/behind} tags may appear under the list entries: they are a reference to the position of the local branch with respect to the one on the server
+    	\end{labeling}	
+    
+    \item Rebase branch into another. Rebasing streamlines commits history, but is better done locally, never on server unless authorised [2 steps]:
+    \begin{enumerate}
+    	\item
+    		\begin{labeling}{\texttt{git rebase master branch-to-rebase}}
+    			\item [\texttt{git checkout branch-to-rebase}]  position \textit{HEAD} to the branch to be rebased
+    		\end{labeling}
+    	\item 
+    		\begin{labeling}{\texttt{git rebase master branch-to-rebase}}
+    			\item [\texttt{git rebase master}]  rebase it into the \textit{master} branch, for instance. Then it is easy to do a fast-forward merge with \texttt{git checkout master} followed by \texttt{git merge branch-to-rebase}
+    		\end{labeling}   	
+    \end{enumerate}
+    	alternatively\\
+    	\begin{labeling}{\texttt{git rebase master branch-to-rebase}}
+    		\item [\texttt{git rebase master branch-to-rebase}] = \texttt{git checkout branch-to-rebase} + \texttt{git rebase master}]
+    	\end{labeling}
+    	
+\end{itemize}
+
+\section{Text editing from cmd/vim. Basic commands}
+\begin{itemize}   
+    \item Create a text file and write something on it (will not append, just overwrite if file exists):\\
+    	\texttt{echo 'My text' > name-of-file.txt}
+    
+    \item Append a line to the body of an already existing text file:\\
+    	\texttt{echo ' added line' >> name-of-file.txt}
+    
+    \item Write text directly from \textit{cmd} with vim:\\
+    	\texttt{vim text.txt}
+    
+    \item Save what was written on file with vim, exit vim and return to \textit{cmd}:\\
+    	push \textit{Esc} + \texttt{:wq}   + push \textit{Enter}
+\end{itemize}
+
+\end{document}
