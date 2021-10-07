@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.12.25)  22 JAN 2021 16:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.12.25)  7 OCT 2021 08:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -218,34 +218,34 @@ File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
 (./git_commands.aux)
 \openout1 = `git_commands.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-Package scrbase Info: activating english \contentsname on input line 9.
-Package scrbase Info: activating english \listfigurename on input line 9.
-Package scrbase Info: activating english \listtablename on input line 9.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+Package scrbase Info: activating english \contentsname on input line 10.
+Package scrbase Info: activating english \listfigurename on input line 10.
+Package scrbase Info: activating english \listtablename on input line 10.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <17.28> on input line 12.
+(Font)              <17.28> on input line 13.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 12.
+(Font)              <12> on input line 13.
 
-Underfull \hbox (badness 10000) in paragraph at lines 33--35
+Underfull \hbox (badness 10000) in paragraph at lines 34--36
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--37
+Underfull \hbox (badness 10000) in paragraph at lines 37--38
 
  []
 
@@ -253,161 +253,161 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--37
 
 
 {c:/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (18.86186pt too wide) in paragraph at lines 69--70
+Overfull \hbox (18.86186pt too wide) in paragraph at lines 70--71
 []\OT1/cmr/m/n/12 the \OT1/cmr/m/it/12 HEAD \OT1/cmr/m/n/12 pointer now points 
 to \OT1/cmr/m/it/12 my-other-branch\OT1/cmr/m/n/12 's
  []
 
 
-Overfull \hbox (6.3977pt too wide) in paragraph at lines 85--87
+Overfull \hbox (6.3977pt too wide) in paragraph at lines 86--88
 []\OT1/cmr/m/n/12 to merge it with lo-cal database, \OT1/cmtt/m/n/12 git merge 
 name-of-
  []
 
 [2]
-Overfull \hbox (3.89139pt too wide) in paragraph at lines 114--115
+Overfull \hbox (3.89139pt too wide) in paragraph at lines 115--116
 []\OT1/cmr/m/n/12 forces re-moval if al-ready staged. Re-moves \OT1/cmr/m/it/12
  name-
  []
 
 LaTeX Font Info:    Trying to load font information for OMS+cmtt on input line 
-116.
-LaTeX Font Info:    No file OMScmtt.fd. on input line 116.
+117.
+LaTeX Font Info:    No file OMScmtt.fd. on input line 117.
 
 LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbraceleft' on input line 116.
+(Font)              for symbol `textbraceleft' on input line 117.
 
 
-Overfull \hbox (156.1738pt too wide) in paragraph at lines 125--126
+Overfull \hbox (156.1738pt too wide) in paragraph at lines 126--127
 []
  []
 
 
-Overfull \hbox (1.75293pt too wide) in paragraph at lines 125--126
+Overfull \hbox (1.75293pt too wide) in paragraph at lines 126--127
 \OT1/cmr/m/n/12 for in-stance, in \OT1/cmr/m/it/12 /git/projects/0a\OT1/cmr/m/n
 /12 , open \OT1/cmr/m/it/12 3b69012c...
  []
 
 [3]
-Overfull \hbox (156.1738pt too wide) in paragraph at lines 133--134
+Overfull \hbox (156.1738pt too wide) in paragraph at lines 134--135
 []
  []
 
 
-Overfull \hbox (5.54567pt too wide) in paragraph at lines 135--136
+Overfull \hbox (5.54567pt too wide) in paragraph at lines 136--137
 []\OT1/cmr/m/n/12 shows which com-mit the \OT1/cmr/m/it/12 HEAD
  []
 
 
-Overfull \hbox (9.31693pt too wide) in paragraph at lines 141--142
+Overfull \hbox (9.31693pt too wide) in paragraph at lines 142--143
 []\OT1/cmr/m/n/12 shows only last 2,3,4.. com-
  []
 
 
-Overfull \hbox (156.1738pt too wide) in paragraph at lines 142--143
+Overfull \hbox (156.1738pt too wide) in paragraph at lines 143--144
 []
  []
 
 
-Overfull \hbox (4.26883pt too wide) in paragraph at lines 142--143
+Overfull \hbox (4.26883pt too wide) in paragraph at lines 143--144
 \OT1/cmr/m/n/12 shows com-mits made since
  []
 
 
-Overfull \hbox (8.0549pt too wide) in paragraph at lines 144--145
+Overfull \hbox (8.0549pt too wide) in paragraph at lines 145--146
 []\OT1/cmr/m/n/12 includes only com-mits with
  []
 
 
-Overfull \hbox (18.82562pt too wide) in paragraph at lines 145--146
+Overfull \hbox (18.82562pt too wide) in paragraph at lines 146--147
 []\OT1/cmr/m/n/12 includes only com-mits chang-
  []
 
 
-Overfull \hbox (5.63965pt too wide) in paragraph at lines 145--146
+Overfull \hbox (5.63965pt too wide) in paragraph at lines 146--147
 \OT1/cmr/m/n/12 ing the code with function-
  []
 
 
-Overfull \hbox (2.17996pt too wide) in paragraph at lines 147--148
+Overfull \hbox (2.17996pt too wide) in paragraph at lines 148--149
 []\OT1/cmr/m/n/12 excludes com-mits that are
  []
 
 [4]
-Overfull \hbox (2.59795pt too wide) in paragraph at lines 178--179
+Overfull \hbox (2.59795pt too wide) in paragraph at lines 179--180
 []\OT1/cmr/m/n/12 pushes tag to re-mote repos-
  []
 
 
-Overfull \hbox (1.94518pt too wide) in paragraph at lines 179--180
+Overfull \hbox (1.94518pt too wide) in paragraph at lines 180--181
 []\OT1/cmr/m/n/12 pushes all lo-cal tags not yet
  []
 
 
-Overfull \hbox (16.56725pt too wide) in paragraph at lines 181--182
+Overfull \hbox (16.56725pt too wide) in paragraph at lines 182--183
 []\OT1/cmr/m/n/12 deletes tag from re-mote repos-
  []
 
 
-Overfull \hbox (39.6964pt too wide) in paragraph at lines 192--193
+Overfull \hbox (39.6964pt too wide) in paragraph at lines 193--194
 []\OT1/cmr/m/n/12 joins \OT1/cmtt/m/n/12 git unstage filename
  []
 
 
-Overfull \hbox (1.60194pt too wide) in paragraph at lines 192--193
+Overfull \hbox (1.60194pt too wide) in paragraph at lines 193--194
 \OT1/cmr/m/n/12 with \OT1/cmtt/m/n/12 git reset HEAD
  []
 
 [5]
-Overfull \hbox (17.69064pt too wide) in paragraph at lines 198--199
+Overfull \hbox (17.69064pt too wide) in paragraph at lines 199--200
 []\OT1/cmr/m/n/12 shows last com-mit for each branch 
  []
 
 
-Overfull \hbox (37.92654pt too wide) in paragraph at lines 201--202
+Overfull \hbox (37.92654pt too wide) in paragraph at lines 202--203
 []\OT1/cmr/m/n/12 shows all merged(unmerged) branches
  []
 
 
-Overfull \hbox (6.76305pt too wide) in paragraph at lines 216--217
+Overfull \hbox (6.76305pt too wide) in paragraph at lines 217--218
 []\OT1/cmr/m/n/12 each lo-cal branch gets up-dated 
  []
 
 
-Overfull \hbox (156.1738pt too wide) in paragraph at lines 217--218
+Overfull \hbox (156.1738pt too wide) in paragraph at lines 218--219
 []
  []
 
 
-Overfull \hbox (7.43819pt too wide) in paragraph at lines 218--219
+Overfull \hbox (7.43819pt too wide) in paragraph at lines 219--220
 []\OT1/cmr/m/n/12 if \OT1/cmr/m/it/12 name-of-branch \OT1/cmr/m/n/12 ex-ists on
  the
  []
 
 
-Overfull \hbox (5.4575pt too wide) in paragraph at lines 218--219
+Overfull \hbox (5.4575pt too wide) in paragraph at lines 219--220
 \OT1/cmr/m/n/12 branch of the one on the server 
  []
 
 
-Overfull \hbox (19.1657pt too wide) in paragraph at lines 219--220
+Overfull \hbox (19.1657pt too wide) in paragraph at lines 220--221
 \OT1/cmr/m/n/12 track the spec-i-fied re-mote branch 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 238--239
+Underfull \hbox (badness 10000) in paragraph at lines 239--240
 
  []
 
 [7]
 
 LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
-(LaTeX3)     260.
+(LaTeX3)     261.
 
 
 LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
-(LaTeX3)     260.
+(LaTeX3)     261.
 
  (./git_commands.aux)
 
@@ -415,13 +415,13 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 3190 strings out of 479382
- 73975 string characters out of 5873307
+ 3191 strings out of 479382
+ 73993 string characters out of 5873307
  490297 words of memory out of 5000000
- 20349 multiletter control sequences out of 15000+600000
- 407299 words of font info for 40 fonts, out of 8000000 for 9000
+ 20350 multiletter control sequences out of 15000+600000
+ 407468 words of font info for 41 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 106i,6n,111p,10634b,270s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 106i,6n,111p,10634b,279s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/tex
 live/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2020/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2020/texmf-dist
@@ -430,7 +430,7 @@ type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmti12.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmtt12.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1
 200.pfb>
-Output written on git_commands.pdf (7 pages, 91104 bytes).
+Output written on git_commands.pdf (7 pages, 92151 bytes).
 PDF statistics:
  57 PDF objects out of 1000 (max. 8388607)
  40 compressed objects within 1 object stream
